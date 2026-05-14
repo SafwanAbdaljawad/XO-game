@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+    margin-right: 1%;
+    margin-bottom: 1.5%;
+    width: 50%;
+    height: 68%;
+    background-color: blue;
+}
+.btns{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    background-color: transparent;
+}
+.btns button{
+    background-color: transparent;
+    background-color: red;
+    color: white;
+    border: none;
+    width: 260px;
+    height:160px;
+    row-gap: 3px;
+    font-size: 100px;
+    font-weight: bold;
+    text-shadow: 
+            0 0 10px #4b135a,  /* Purple glow */
+            0 0 20px #4b135a,
+            0 0 30px #4b135a,
+            0 0 40px #4b135a,
+            0 0 50px #4b00ff,  /* Blue outer glow */
+            0 0 75px #4b00ff;
+    text-transform: uppercase;
+}
+
+/* .try{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+} */
+.neon{
+    border: 5px solid #040404;
+    width: 50.6%;
+    height: 1px;
+    position: fixed;
+    z-index: 10;
+    border-radius: 4px;
+    box-shadow: 
+    0 0 10px #4b135a, 
+    0 0 20px #4b135a, 
+    0 0 30px #4b135a,
+    0 0 40px #4b00ff, 
+    0 0 60px #4b00ff;
+}
+.neon-border-width1{
+    top: 35%;
+    right: 0px;
+    left: 24.2%;
+    bottom: 0;
+}
+.neon-border-width2{
+    top: 61%;
+    right: 0px;
+    left: 24.2%;
+    bottom: 0;
+}
+.neon-border-hight1{
+    width: 1px;
+    height: 70.1%;
+    top: 13.5%;
+    right: 0px;
+    left: 40.5%;
+    bottom: 0;
+}
+.neon-border-hight2{
+    width: 1px;
+    height: 70.1%;
+    top: 13.5%;
+    right: 0px;
+    left: 59%;
+    bottom: 0;
+}
+.bt1{
+    border-right: 5px solid #040404;
+    z-index: 10;
+    border-radius: 4px;
+    box-shadow: 
+    0 0 10px #4b135a, 
+    0 0 20px #4b135a, 
+    0 0 30px #4b135a,
+    0 0 40px #4b00ff, 
+    0 0 60px #4b00ff;
+}
+    </style>
+</head>
+<body>
+    <div id="game" class="background">
+
+        <div class="neon-border-width1 neon"></div>
+        <div class="neon-border-width2 neon"></div>
+        <div class="neon-border-hight1 neon"></div>
+        <div class="neon-border-hight2 neon"></div>
+        
+        <div class="btns">
+          <button class="btn1" id="1"></button>
+          <button id="2"></button>
+          <button id="3"></button>
+          <button id="4"></button>
+          <button id="5"></button>
+          <button id="6"></button>
+          <button id="7"></button>
+          <button id="8"></button>
+          <button id="9"></button>
+        </div>
+    
+</body>
+</html>
