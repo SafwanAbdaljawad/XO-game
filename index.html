@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="XO.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>XO</title>
+
+</head>
+
+<body>
+  <div class="soundControl">
+    <div>
+      <img class="menu-element" id="imgStart" src="icons8-start-100.png" alt="">
+      <img class="menu-element" id="imgStop" src="icons8-stop-100.png" alt="">
+    </div>
+  </div>
+  <div id="frame" class="frame">
+    <!-- sounds -->
+
+    <audio id="backgroundSound" src="my-side-play-house-206932.mp3" loop></audio>
+    <audio id="HoverSound" src="y2mate.com - GTA SA Menu  Sound Effect HD.mp3"></audio>
+    <audio id="ClickSound" src="90s-game-ui-7-185100.mp3"></audio>
+    <audio id="playerOneWins" src="player-1-wins.mp3"></audio>
+    <audio id="playeTwoWins" src="player-2-wins.mp3"></audio>
+    <audio id="Draw" src="Voicy_Laugh 1.mp3"></audio>
+    <audio id="wrong" src="wrong-47985.mp3"></audio>
+    <audio id="roundOne" src="Voicy_Round one fight.mp3"></audio>
+    <audio id="roundTwo" src="Voicy_Round two fight.mp3"></audio>
+    <audio id="Finalround" src="Voicy_Final Round fight.mp3"></audio>
+    <!-- songs -->
+    <audio id="Beliver" src="Beliver.mp3"></audio>
+    <audio id="wild" src="Wild one.mp3"></audio>
+    <audio id="shape" src="Shape of you.mp3"></audio>
+    <!-- menu button -->
+    <div id="menu" class="menu-button">
+      <h1 id="play" class="menu-element">Play</h1>
+      <h1 id="option" class="menu-element">Option</h1>
+      <h1 id="Exit" class="menu-element">Exit</h1>
+    </div>
+
+
+    <!--players name  -->
+    <div id="players_names_container" class="players_names_container">
+      <div class="second_container">
+        
+        <div class="players_names">
+          <label class="players_Name" for="">Player One</label>
+          <input id="player_one_name" class="input_player_name" type="text">
+        </div>
+
+        <div style="margin-left: 50px;" class="players_names">
+          <label class="players_Name" for="">Player Two</label>
+          <input id="player_two_name" class="input_player_name" type="text">
+        </div>
+
+      </div>
+
+      <div class="arrows">
+        <img id="left_arrow" class="left_arrow"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUwi30geQiF0S9s2peuGyCSXEm7ST47_4tZQ&s">
+        <img id="right_arrow" class="right_arrow"
+          src="https://i.pinimg.com/originals/90/a5/fa/90a5fa98ddfa942be597e94d30f62fa8.png">
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div id="options" class="menu-button">
+      <h1 id="music" class="menu-element">Music</h1>
+      <div id="songs" class="songs">
+        <div>
+          <h1 id="Beliver_button" class="menu-element">Beliver</h1>
+          <h1 id="shape_button" class="menu-element">Shape Of You</h1>
+          <h1 id="wild_button" class="menu-element">Wild one</h1>
+        </div>
+        <h1 id="Default" class="menu-element">Default</h1>
+      </div>
+      <h1 id="theme" class="menu-element">Theme</h1>
+
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button id="slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+            class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button class="slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button class="slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button class="slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button class="slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+          <button class="slide" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+            aria-label="Slide 6"></button>
+        </div>
+        <div class="carousel-inner">
+          <div id="img1" class="carousel-item active">
+            <img
+              src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6b86bdb4-540f-4240-bed6-228912593dc2/dgd86aq-3d44b9c4-98d6-4046-8b89-4864aaaf92e7.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZiODZiZGI0LTU0MGYtNDI0MC1iZWQ2LTIyODkxMjU5M2RjMlwvZGdkODZhcS0zZDQ0YjljNC05OGQ2LTQwNDYtOGI4OS00ODY0YWFhZjkyZTcuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.e_lrm6FRAmeZg8jTX-zXMAwHLDXqyYmXlVhc_LnFp5g"
+              class="d-block w-100">
+          </div>
+          <div id="img2" class="carousel-item">
+            <img
+              src="https://i.gjcdn.net/public-data/games/6/148/435648/media/game-description/purplenight-wwzj3jae.gif"
+              class="d-block w-100">
+          </div>
+          <div id="img3" class="carousel-item">
+            <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/9bc27292880429.5e569ff84e4d0.gif"
+              class="d-block w-100">
+          </div>
+          <div id="img4" class="carousel-item">
+            <img
+              src="https://wallpapers-clan.com/wp-content/uploads/2024/03/dragon-ball-goku-sparks-gif-preview-desktop-wallpaper.gif"
+              class="d-block w-100">
+          </div>
+          <div id="img5" class="carousel-item">
+            <img
+              src="https://steamuserimages-a.akamaihd.net/ugc/1710790339046320170/F22008124D0F7CFFB396B63804AFAB1CB58D185A/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+              class="d-block w-100">
+          </div>
+          <div id="img6" class="carousel-item">
+            <img
+              src="https://steamuserimages-a.akamaihd.net/ugc/857234126991079163/66F3363D337A6479CF71C56242756B83938D3064/?imw=1024&imh=684&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+              class="d-block w-100">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <h1 id="back" class="menu-element">Back</h1>
+    </div>
+
+
+    <div id="bye" class="bye">
+      <div>
+        <button id="byebye" style="margin-right: 10px;" class="menu-element">Bye</button>
+        <button id="nobye" style="margin-left: 10px;" class="menu-element">No</button>
+      </div>
+    </div>
+
+      <div class="name1" id="name1"><span></span></div>
+      <div class="name2" id="name2"><span></span></div>
+  
+    <div id="game" class="background">
+      
+      
+
+      <div class="neon-border-width1 neon"></div>
+      <div class="neon-border-width2 neon"></div>
+      <div class="neon-border-hight1 neon"></div>
+      <div class="neon-border-hight2 neon"></div>
+      
+      <div class="btns">
+        <button class="" id="1"></button>
+        <button id="2"></button>
+        <button id="3"></button>
+        <button id="4"></button>
+        <button id="5"></button>
+        <button id="6"></button>
+        <button id="7"></button>
+        <button id="8"></button>
+        <button id="9"></button>
+      </div>
+      <!-- <div>
+        <button class="try" id="try">Try again</button>
+      </div> -->
+    </div>
+
+
+  </div>
+
+  
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="XO.js"></script>
+</body>
+
+</html>
